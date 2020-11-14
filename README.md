@@ -25,4 +25,13 @@ mvn clean install
 ```
 
 - Firstly Run **Produce App** and send message via **Postman** or **curl**
+
+in Postman enter following Url
+
+```
+localhost:8282/send?msg=hello-rabbit
+
+```
+
+
 - Secondly Run **Consumer App** , you will see message in console that you sent.

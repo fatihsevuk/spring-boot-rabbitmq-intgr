@@ -27,15 +27,15 @@ public class SendMessageController {
 
             try {
                 messageService.sendMessage(msg);
-                return new ResponseEntity("Mesaj gönderme başarılı",HttpStatus.OK);
+                return new ResponseEntity("Message successfuly sent.",HttpStatus.OK);
 
             }catch(Exception e) {
-                return new ResponseEntity("Hata:"+e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
+                return new ResponseEntity("Error:"+e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
 
             }
 
         }else {
-            return new ResponseEntity("Boş mesaj",HttpStatus.BAD_REQUEST);
+            return new ResponseEntity("Empty message",HttpStatus.BAD_REQUEST);
         }
     }
 }
